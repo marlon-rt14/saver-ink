@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="grid-links">
+    {{#each links}}
+      <div class="grid-link-item border border-success border-3 rounded">
+        <div class="card">
+          <div class="card-body ">
+            <div class="mb-3">
+              <a href="{{url}}" target="_blank" class="">
+                <h2 class="card-title text-uppercase text-center">{{title}}</title></h2>
+              </a>
+              <p class="text-center m-2">{{toAgoDate created_at}}</p>
+              <p class="text-justify">{{description}}</p>
+            </div>
+            <div class="d-grid gap-3 d-flex justify-content-center">
+              <a href="/links/delete/{{id_link}}" class="btn btn-danger">Eliminar</a>
+              <a href="/links/edit/{{id_link}}" class="btn btn-primary">Editar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+			{{else}}
+      <div class="container container-card-empty">
+        <div class="row">
+          <div class="col-md-5 mx-auto ">
+			  		<div class="card bg-warning bg-gradient bg-opacity- rounded">
+			  			<div class="card-body text-center fs-5">
+			  				<p class="mb-3">Does not anything link saved yet</p>
+			  				<a href="/links/add"><h4>Create One</h4></a>
+			  			</div>
+			  		</div>
+			  	</div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

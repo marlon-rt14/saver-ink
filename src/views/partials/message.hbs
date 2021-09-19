@@ -1,0 +1,32 @@
+{{#if success}}
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-5 mx-auto">
+        <div class="alert alert-primary alert-dismissible fade show">{{success}}
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/if}}
+{{#if message}}
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-5 mx-auto">
+        <div class="alert alert-primary alert-dismissible fade show">{{message}}
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/if}}
